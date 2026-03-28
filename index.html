@@ -1,242 +1,195 @@
-<style>
-  body {
-    <nav class="topnav">
-  <div class="nav-brand">
-    <img src="logo.png" alt="Valor Bridge Foundation logo">
-    <span>Valor Bridge Foundation</span>
-  </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valor Bridge Foundation</title>
 
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="resources.html">Resources</a>
-    <a href="get-involved.html">Get Involved</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-    <main class="page-wrap">
-  <section class="hero-box">
-    <p class="hero-tag">For the people, by the people.</p>
-    <h1>Serving veterans through support, guidance, and community.</h1>
-    <p class="hero-text">
-      Valor Bridge Foundation is committed to helping veterans find programs,
-      assistance, and real support through outreach, advocacy, and community connection.
-    </p>
-  </section>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f5f1e8;
 
-  <section class="content-box">
-    <h2>Mission Statement</h2>
-    <p><em>“For the people, by the people.”</em></p>
+      background:
+        linear-gradient(rgba(10, 15, 10, 0.85), rgba(10, 15, 10, 0.9)),
+        url("background.png");
 
-    <p>
-      The Valor Bridge Foundation is committed to serving those who have served by
-      providing comprehensive support to veterans at every stage of their journey—both
-      those transitioning from military service to civilian life and those continuing to
-      fight personal battles at home.
-    </p>
-
-    <p>
-      Rooted in the principles of service, unity, and resilience, we deliver programs
-      focused on community outreach, substance abuse and domestic violence support,
-      trade skill development, employment assistance, resume building, and personalized
-      guidance through the VA system, including disability claims navigation.
-    </p>
-
-    <p>
-      We believe no veteran should stand alone. Through hands-on mentorship and
-      advocacy, we act as a bridge—connecting veterans to the resources, opportunities,
-      and support systems they deserve.
-    </p>
-
-    <p>
-      Guided by the Hawaiian values of ʻOhana (family), respect, and community, we
-      foster an inclusive environment where veterans and civilians come together as one.
-      Through local events, outreach initiatives, and collaborative efforts, we aim to
-      strengthen our communities, uplift our veterans, and ensure that help is always
-      within reach.
-    </p>
-
-    <p>
-      <strong>Together, we are not just transitioning—we are coming home as one.</strong>
-    </p>
-  </section>
-</main>
-</style>
- body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #f5f1e8;
-    background:
-      linear-gradient(rgba(10, 15, 10, 0.85), rgba(10, 15, 10, 0.9)),
-      url("background.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
-  .topnav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 14px 24px;
-    background: rgba(8, 12, 9, 0.82);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(212, 178, 106, 0.35);
-  }
-
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .nav-brand img {
-    height: 44px;
-    width: auto;
-    display: block;
-  }
-
-  .nav-brand span {
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #e6d3a3;
-    font-size: 0.95rem;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
-  }
-
-  .nav-links a {
-    color: #f5f1e8;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
-  }
-
-  .nav-links a:hover {
-    color: #d4b26a;
-  }
-<style>
-  .contact-home {
-    margin-top: 24px;
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    margin-top: 20px;
-  }
-
-  .contact-item {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(212, 178, 106, 0.2);
-    border-radius: 16px;
-    padding: 18px;
-  }
-
-  .contact-item h3 {
-    margin: 0 0 8px;
-    color: #e6d3a3;
-    font-size: 1.05rem;
-  }
-
-  .contact-item p {
-    margin: 0;
-    color: #e6dfd0;
-  }
-
-  @media (max-width: 700px) {
-    .contact-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-<style>
-  .page-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px 70px;
-  }
-
-  .hero-box,
-  .content-box {
-    background: rgba(10, 14, 11, 0.74);
-    border: 1px solid rgba(212, 178, 106, 0.28);
-    border-radius: 22px;
-    padding: 30px 26px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-  }
-
-  .hero-box {
-    margin-bottom: 24px;
-  }
-
-  .hero-tag {
-    margin: 0 0 10px;
-    color: #d4b26a;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-  }
-
-  .hero-box h1 {
-    margin: 0 0 16px;
-    font-size: 2.6rem;
-    line-height: 1.1;
-    color: #f7f1e4;
-  }
-
-  .hero-text,
-  .content-box p {
-    color: #e6dfd0;
-    line-height: 1.8;
-    font-size: 1rem;
-  }
-
-  .content-box h2 {
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 1.8rem;
-    color: #e6d3a3;
-  }
-
-  @media (max-width: 700px) {
-    .hero-box h1 {
-      font-size: 2rem;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
+    /* NAV BAR */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      background: rgba(8, 12, 9, 0.82);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(212, 178, 106, 0.35);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-brand img {
+      height: 44px;
+    }
+
+    .nav-brand span {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #e6d3a3;
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #f5f1e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #d4b26a;
+    }
+
+    /* PAGE WRAP */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 70px;
+    }
+
+    /* BOXES */
     .hero-box,
     .content-box {
-      padding: 24px 18px;
+      background: rgba(10, 14, 11, 0.75);
+      border: 1px solid rgba(212, 178, 106, 0.28);
+      border-radius: 22px;
+      padding: 30px;
+      margin-bottom: 20px;
     }
-  }
-</style>
-</style>
-<section class="content-box contact-home">
-  <h2>Contact Us</h2>
-  <p>If you would like to connect with Valor Bridge Foundation, support our mission, or learn more about how to get involved, reach out to us below.</p>
 
-  <div class="contact-grid">
-    <div class="contact-item">
-      <h3>Email</h3>
-      <p>ValorBridgeFoundation26@gmail.com</p>
+    .hero-tag {
+      color: #d4b26a;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      color: #e6d3a3;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="topnav">
+    <div class="nav-brand">
+      <img src="logo.png">
+      <span>Valor Bridge Foundation</span>
     </div>
 
-    <div class="contact-item">
-      <h3>Location</h3>
-      <p>Las Vegas, Nevada</p>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resources.html">Resources</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </div>
-</section>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="page-wrap">
+
+    <section class="hero-box">
+      <p class="hero-tag">For the people, by the people.</p>
+      <h1>Serving veterans through support, guidance, and community.</h1>
+      <p>
+        Valor Bridge Foundation is committed to helping veterans find programs,
+        assistance, and real support through outreach, advocacy, and community connection.
+      </p>
+    </section>
+
+    <section class="content-box">
+      <h2>Mission Statement</h2>
+
+      <p><em>“For the people, by the people.”</em></p>
+
+      <p>
+        The Valor Bridge Foundation is committed to serving those who have served by providing
+        comprehensive support to veterans at every stage of their journey.
+      </p>
+
+      <p>
+        Rooted in service, unity, and resilience, we provide outreach, assistance,
+        employment support, and guidance through the VA system.
+      </p>
+
+      <p>
+        Guided by Hawaiian values of ʻOhana, respect, and community, we bring veterans
+        and civilians together as one.
+      </p>
+
+      <p><strong>Together, we are coming home as one.</strong></p>
+    </section>
+
+    <section class="content-box">
+      <h2>Contact Us</h2>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p>ValorBridgeFoundation26@gmail.com</p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Location</h3>
+          <p>Las Vegas, Nevada</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
