@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valor Bridge Foundation</title>
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -14,603 +16,328 @@
     }
 
     body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #f5f1e8;
-
-  background:
-    linear-gradient(rgba(5,10,8,0.75), rgba(5,10,8,0.85)),
-    url("https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1600&q=80");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      background-image: linear-gradient(rgba(10,15,10,0.75), rgba(10,15,10,0.9)), url('/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
     }
 
-    .overlay-pattern {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(80, 100, 60, 0.08) 0px,
-      rgba(80, 100, 60, 0.08) 25px,
-      rgba(30, 50, 30, 0.08) 25px,
-      rgba(30, 50, 30, 0.08) 50px
-    ),
-    radial-gradient(circle at top right, rgba(212,178,106,0.15), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(255,255,255,0.06), transparent 35%);
-}
-
-    header, section, footer {
-      position: relative;
-      z-index: 1;
-    }
-
+    /* HEADER */
     header {
-      background: rgba(6, 10, 7, 0.88);
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(250, 204, 21, 0.3);
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
-      backdrop-filter: blur(8px);
+      z-index: 100;
     }
 
-    .nav {
-      max-width: 1200px;
+    .header-container {
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 16px 22px;
+      padding: 1rem 1.5rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 0.75rem;
     }
 
     .brand img {
-      width: 58px;
-      height: 58px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      padding: 4px;
+      height: 3rem;
+      width: auto;
     }
 
     .brand-text {
-      line-height: 1.1;
-    }
-
-    .brand-text strong {
-      display: block;
-      font-size: 1rem;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
+      font-size: 0.875rem;
+      color: #fbbf24;
     }
 
-    .brand-text span {
-      font-size: 0.82rem;
-      color: #d5d0c2;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: #f5f1e8;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: #d4b26a;
-    }
-
+    /* HERO */
     .hero {
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 22px;
+      position: relative;
+      padding: 6rem 1.5rem;
+      text-align: center;
     }
 
     .hero-card {
-      width: 100%;
-      max-width: 1180px;
-      background: linear-gradient(145deg, rgba(12, 20, 14, 0.80), rgba(22, 31, 21, 0.72));
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 28px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 0;
-    }
-
-    .hero-left {
-      padding: 56px 42px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: rgba(192, 34, 34, 0.16);
-      color: #f0d8d8;
-      border: 1px solid rgba(255,255,255,0.14);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      margin-bottom: 18px;
+      max-width: 56rem;
+      margin: 0 auto;
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2.5rem;
+      border-radius: 1.875rem;
+      border: 1px solid rgba(250, 204, 21, 0.2);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     }
 
     h1 {
-      font-size: 3.4rem;
-      line-height: 1.05;
-      margin: 0 0 18px;
-      color: #fff8ec;
+      font-size: 2.25rem;
+      font-weight: 900;
+      line-height: 1.2;
+      color: #fcd34d;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3.75rem;
+      }
     }
 
     .hero p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #e3ddcf;
-      max-width: 700px;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+      line-height: 1.75;
     }
 
-    .btn-row {
+    /* BUTTONS */
+    .button-group {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 14px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: 0.2s ease;
-      border: 1px solid rgba(255,255,255,0.14);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: #c32727;
-      color: white;
-    }
-
-    .btn-secondary {
-      background: #53643c;
-      color: white;
-    }
-
-    .btn-light {
-      background: rgba(255,255,255,0.08);
-      color: #fff;
-    }
-
-    .hero-right {
-      background:
-        linear-gradient(rgba(5,8,6,0.35), rgba(5,8,6,0.55)),
-        radial-gradient(circle at top right, rgba(194,39,39,0.28), transparent 32%),
-        radial-gradient(circle at bottom left, rgba(205,177,111,0.18), transparent 28%);
-      display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 34px;
-      min-height: 460px;
+      gap: 1rem;
+      margin-top: 2rem;
     }
 
-    .logo-panel {
-      width: 100%;
-      max-width: 440px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 28px;
-      padding: 22px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.28);
-    }
-
-    .logo-panel img {
-      width: 100%;
-      max-width: 360px;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto 18px;
-    }
-
-    .logo-panel p {
-      margin: 0;
-      font-size: 0.98rem;
-      color: #efe7d9;
-      line-height: 1.7;
-    }
-
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 22px;
-    }
-
-    .section-title {
-      font-size: 2.3rem;
-      margin: 0 0 14px;
-      color: #fff5e6;
-    }
-
-    .section-sub {
-      color: #ddd6c8;
-      max-width: 760px;
-      line-height: 1.8;
-      font-size: 1.04rem;
-    }
-
-    .about-grid,
-    .involved-grid,
-    .program-grid {
-      display: grid;
-      gap: 22px;
-      margin-top: 34px;
-    }
-
-    .about-grid {
-      grid-template-columns: 1.2fr 0.8fr;
-    }
-
-    .program-grid,
-    .involved-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .card {
-      background: rgba(14, 20, 15, 0.80);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 22px;
-      padding: 26px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      color: #f8efdf;
-      font-size: 1.28rem;
-    }
-
-    .card p, .card li {
-      color: #ddd6c8;
-      line-height: 1.8;
+    button, .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
       font-size: 1rem;
     }
 
-    .values-list {
-      padding-left: 18px;
-      margin: 0;
+    .btn-primary {
+      background: #eab308;
+      color: black;
     }
 
-    .flag-bar {
-      height: 8px;
-      width: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #b22222 0%, #ffffff 50%, #183a73 100%);
-      margin: 18px 0 0;
-      opacity: 0.95;
+    .btn-primary:hover {
+      transform: scale(1.05);
     }
 
-    .hawaii-note {
-      margin-top: 16px;
-      padding: 14px 16px;
-      border-left: 4px solid #d4b26a;
-      background: rgba(212, 178, 106, 0.08);
-      border-radius: 12px;
-      color: #f1e6d1;
-      line-height: 1.7;
+    .btn-secondary {
+      border: 1px solid #facc15;
+      background: transparent;
+      color: white;
     }
 
-    .contact-box {
+    .btn-secondary:hover {
+      background: #facc15;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    .btn-danger {
+      background: #dc2626;
+      color: white;
+    }
+
+    .btn-danger:hover {
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    section h2 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: #facc15;
+      margin-bottom: 2.5rem;
+    }
+
+    section p {
+      color: #d1d5db;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ABOUT SECTION */
+    .about-card {
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(250, 204, 21, 0.2);
+    }
+
+    .about-card h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    /* PROGRAMS GRID */
+    .program-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-top: 34px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
     }
 
-    .contact-lines p {
-      margin: 0 0 12px;
-      font-size: 1.02rem;
-      color: #e6dece;
+    .program-card {
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(250, 204, 21, 0.2);
     }
 
+    .program-card h3 {
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .program-card p {
+      color: #9ca3af;
+      font-size: 0.95rem;
+    }
+
+    /* CONTACT SECTION */
+    .contact-card {
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(250, 204, 21, 0.2);
+    }
+
+    .contact-card h3 {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #facc15;
+      margin-bottom: 1rem;
+    }
+
+    .contact-card p {
+      margin: 0.75rem 0;
+    }
+
+    /* FOOTER */
     footer {
-      padding: 24px 22px 36px;
       text-align: center;
-      color: #cfc7b8;
-      background: rgba(6, 10, 7, 0.85);
-      border-top: 1px solid rgba(255,255,255,0.10);
+      color: #9ca3af;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.7);
+      border-top: 1px solid rgba(250, 204, 21, 0.2);
     }
 
-    @media (max-width: 960px) {
-      .hero-grid,
-      .about-grid,
-      .program-grid,
-      .involved-grid,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-left,
-      .hero-right {
-        padding: 30px 24px;
-      }
-    }
-
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       h1 {
         font-size: 2rem;
       }
 
-      .section-title {
-        font-size: 1.8rem;
+      section {
+        padding: 3rem 1.5rem;
       }
 
-      .btn-row {
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero-card {
+        padding: 1.5rem;
+      }
+
+      .button-group {
         flex-direction: column;
       }
 
-      .btn {
-        text-align: center;
-      }
-
-      .brand img {
-        width: 48px;
-        height: 48px;
+      button, .btn {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay-pattern"></div>
 
+  <!-- HEADER -->
   <header>
-    <div class="nav">
+    <div class="header-container">
       <div class="brand">
-        <img src="logo.png" alt="Valor Bridge Foundation logo">
-        <div class="brand-text">
-          <strong>Valor Bridge Foundation</strong>
-          <span>Veteran support • outreach • community</span>
-        </div>
+        <img src="/logo.png" alt="Valor Bridge Foundation">
+        <span class="brand-text">Valor Bridge Foundation</span>
       </div>
-
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#mission">Mission</a>
-        <a href="#programs">Programs</a>
-        <a href="#involved">Get Involved</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-card">
-      <div class="hero-grid">
-        <div class="hero-left">
-          <div class="tag">Military-inspired nonprofit</div>
-          <h1>Bridging Veterans to Support, Stability, and Community</h1>
-          <p>
-            Valor Bridge Foundation helps connect veterans with programs, assistance,
-            food and hygiene support, outreach, and a stronger sense of community.
-            Our goal is to make sure no veteran feels overlooked or alone.
-          </p>
-
-          <div class="btn-row">
-            <a class="btn btn-primary" href="#contact">Donate</a>
-            <a class="btn btn-secondary" href="#involved">Volunteer</a>
-            <a class="btn btn-light" href="#contact">Get Help</a>
-          </div>
-
-          <div class="flag-bar"></div>
-        </div>
-
-        <div class="hero-right">
-          <div class="logo-panel">
-            <img src="logo.png" alt="Valor Bridge Foundation emblem">
-            <p>
-              Built around service, unity, and respect for those who served.
-              With military roots, community focus, and a spirit of aloha,
-              we aim to create meaningful support that lasts.
-            </p>
-          </div>
-        </div>
+      <h1>Bridging Veterans to Support, Stability, and Community</h1>
+      <p>
+        Supporting veterans through outreach, essential resources, and strong community connections.
+      </p>
+      <div class="button-group">
+        <button class="btn-primary">Donate</button>
+        <button class="btn-secondary">Volunteer</button>
+        <button class="btn-danger">Get Help</button>
       </div>
     </div>
   </section>
 
-  <section class="section" id="about">
-    <h2 class="section-title">About Us</h2>
-    <p class="section-sub">
-      “For the people, by the people.”
-The Valor Bridge Foundation is committed to serving those who have served by providing comprehensive support to veterans at every stage of their journey—both those transitioning from military service to civilian life and those continuing to fight personal battles at home.
-Rooted in the principles of service, unity, and resilience, we deliver programs focused on community outreach, substance abuse and domestic violence support, trade skill development, employment assistance, resume building, and personalized guidance through the VA system, including disability claims navigation.
-We believe no veteran should stand alone. Through hands-on mentorship and advocacy, we act as a bridge—connecting veterans to the resources, opportunities, and support systems they deserve.
-Guided by the Hawaiian values of ʻOhana (family), respect, and community, we foster an inclusive environment where veterans and civilians come together as one. Through local events, outreach initiatives, and collaborative efforts, we aim to strengthen our communities, uplift our veterans, and ensure that help is always within reach.
-Together, we are not just transitioning—we are coming home as one.
-    </p>
-
-    <div class="about-grid">
-      <div class="card">
-        <h3>Who We Are</h3>
-        <p>
-          We are a nonprofit foundation centered on service, dignity, and connection.
-          We believe veterans should have easier access to programs, assistance, and
-          community support without feeling lost in the process.
-        </p>
-        <p>
-          Our work is grounded in showing up, building trust, and creating a bridge
-          between veterans and the help available to them.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>What We Value</h3>
-        <ul class="values-list">
-          <li>Service before self</li>
-          <li>Respect for every veteran’s journey</li>
-          <li>Strong community connection</li>
-          <li>Reliable outreach and support</li>
-          <li>Practical help that makes a difference</li>
-        </ul>
-
-        <div class="hawaii-note">
-          We also want the foundation’s identity to reflect Hawaiian culture through
-          a sense of ohana, respect, and community care.
-        </div>
-      </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about-card">
+      <h3>About Us</h3>
+      <p>
+        Valor Bridge Foundation was created to connect veterans with the support, programs, and community they deserve. We focus on real-world help, from essential supplies to long-term guidance.
+      </p>
     </div>
   </section>
 
-  <section class="section" id="mission">
-    <h2 class="section-title">Our Mission</h2>
-    <p><strong>🇺🇸 Valor Bridge Foundation – Mission Statement</strong></p>
-
-<p><em>“For the people, by the people.”</em></p>
-
-<p>
-The Valor Bridge Foundation is committed to serving those who have served by providing comprehensive support to veterans at every stage of their journey—both those transitioning from military service to civilian life and those continuing to fight personal battles at home.
-</p>
-
-<p>
-Rooted in the principles of service, unity, and resilience, we deliver programs focused on community outreach, substance abuse and domestic violence support, trade skill development, employment assistance, resume building, and personalized guidance through the VA system, including disability claims navigation.
-</p>
-
-<p>
-We believe no veteran should stand alone. Through hands-on mentorship and advocacy, we act as a bridge—connecting veterans to the resources, opportunities, and support systems they deserve.
-</p>
-
-<p>
-Guided by the Hawaiian values of ʻOhana (family), respect, and community, we foster an inclusive environment where veterans and civilians come together as one. Through local events, outreach initiatives, and collaborative efforts, we aim to strengthen our communities, uplift our veterans, and ensure that help is always within reach.
-</p>
-
-<p>
-<strong>Together, we are not just transitioning—we are coming home as one.</strong>
-</p>
-    </div>
-  </section>
-
-  <section class="section" id="programs">
-    <h2 class="section-title">Programs & Support</h2>
-    <p class="section-sub">
-      We focus on direct support and meaningful connection that can help veterans
-      rebuild stability and feel supported.
-    </p>
-
+  <!-- PROGRAMS -->
+  <section id="programs">
+    <h2>Our Programs</h2>
     <div class="program-grid">
-      <div class="card">
-        <h3>Resource Navigation</h3>
-        <p>
-          Helping veterans find programs, support services, benefits, and assistance
-          that match their needs.
-        </p>
+      <div class="program-card">
+        <h3>Resource Connection</h3>
+        <p>Helping veterans find housing, jobs, and support programs.</p>
       </div>
-
-      <div class="card">
-        <h3>Food & Hygiene Bags</h3>
-        <p>
-          Providing care bags and essential supplies to support veterans with immediate
-          everyday needs.
-        </p>
+      <div class="program-card">
+        <h3>Food & Hygiene</h3>
+        <p>Providing care packages to meet basic needs.</p>
       </div>
-
-      <div class="card">
+      <div class="program-card">
         <h3>Community Outreach</h3>
-        <p>
-          Building relationships in the community, showing up in person, and creating
-          stronger support systems through outreach.
-        </p>
+        <p>Building connections and support systems.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="involved">
-    <h2 class="section-title">Get Involved</h2>
-    <p class="section-sub">
-      Whether you want to donate, volunteer, or partner with us, your support helps
-      us serve more veterans and strengthen the community around them.
-    </p>
-
-    <div class="involved-grid">
-      <div class="card">
-        <h3>Donate</h3>
-        <p>
-          Support food bags, hygiene kits, outreach events, and direct assistance for veterans.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Volunteer</h3>
-        <p>
-          Help with community events, organizing supplies, outreach efforts, and support activities.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Partner</h3>
-        <p>
-          Join us as a local business, community member, or organization to expand our impact.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="section-sub">
-      Reach out to connect, support the mission, volunteer, or ask how to get help.
-    </p>
-
-    <div class="contact-box">
-      <div class="card contact-lines">
-        <h3>Contact Information</h3>
-        <p><strong>Email:</strong> ValorBridgeFoundation26@gmail.com</p>
-        <p><strong>Location:</strong> Las Vegas, Nevada</p>
-        <p><strong>Status:</strong> Building support, outreach, and veteran-centered community connections</p>
-      </div>
-
-      <div class="card">
-        <h3>Next Steps</h3>
-        <p>
-          As the foundation grows, this site can later include real donation links,
-          event information, volunteer sign-up forms, sponsor features, and your own photos.
-        </p>
-      </div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-card">
+      <h3>Contact Information</h3>
+      <p><strong>Email:</strong> ValorBridgeFoundation26@gmail.com</p>
+      <p><strong>Location:</strong> Las Vegas, Nevada</p>
     </div>
   </section>
 
   <footer>
-    © 2026 Valor Bridge Foundation. All rights reserved.
+    © 2026 Valor Bridge Foundation
   </footer>
+
 </body>
 </html>
