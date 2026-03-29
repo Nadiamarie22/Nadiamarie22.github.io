@@ -1,142 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Resources - Valor Bridge Foundation</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Valor Bridge Foundation</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #f5f1e8;
-
-      background:
-        linear-gradient(rgba(10, 15, 10, 0.85), rgba(10, 15, 10, 0.9)),
-        url("background.png");
-
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
     }
 
-    /* NAV */
-    .topnav {
-      position: sticky;
-      top: 0;
+    header {
+      background-color: #1f3c88;
+      padding: 15px 30px;
+    }
+
+    .navbar {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 14px 24px;
-      background: rgba(8, 12, 9, 0.82);
-      border-bottom: 1px solid rgba(212, 178, 106, 0.35);
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .nav-brand img {
-      height: 44px;
-    }
-
-    .nav-brand span {
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #e6d3a3;
-      font-size: 0.95rem;
-    }
-
-    .nav-links {
-      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
 
-    .nav-links a {
-      color: #f5f1e8;
+    .navbar a {
+      color: white;
       text-decoration: none;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: #d4b26a;
-    }
-
-    /* CONTENT */
-    .page-wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    .content-box {
-      background: rgba(10, 14, 11, 0.75);
-      border: 1px solid rgba(212, 178, 106, 0.28);
-      border-radius: 22px;
-      padding: 40px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.3rem;
-      color: #e6d3a3;
-      margin-bottom: 15px;
-    }
-
-    p {
-      line-height: 1.8;
-      font-size: 1.05rem;
-      color: #e6dfd0;
-    }
-
-    .highlight {
-      margin-top: 20px;
       font-weight: bold;
-      color: #d4b26a;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .resources-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .resources-section h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #1f3c88;
+    }
+
+    .resources-intro {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 30px auto;
+      font-size: 16px;
+      line-height: 1.6;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .accordion {
+      background-color: #1f3c88;
+      color: white;
+      cursor: pointer;
+      padding: 16px 20px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-top: 12px;
+      border-radius: 8px;
+    }
+
+    .accordion:hover,
+    .accordion.active {
+      background-color: #16306d;
+    }
+
+    .panel {
+      background-color: white;
+      display: none;
+      overflow: hidden;
+      padding: 0 20px 20px 20px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .panel ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    .panel li {
+      padding: 14px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .panel li:last-child {
+      border-bottom: none;
+    }
+
+    .panel a {
+      color: #1f3c88;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .panel a:hover {
+      text-decoration: underline;
+    }
+
+    .resource-description {
+      display: block;
+      margin-top: 5px;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #1f3c88;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .resources-section {
+        padding: 15px;
+      }
+
+      .accordion {
+        font-size: 16px;
+      }
+
+      .panel a {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <nav class="topnav">
-    <div class="nav-brand">
-      <img src="logo.png">
-      <span>Valor Bridge Foundation</span>
-    </div>
-
-    <div class="nav-links">
+  <header>
+    <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="resources.html">Resources</a>
       <a href="get-involved.html">Get Involved</a>
+      <a href="resources.html" class="active">Resources</a>
       <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="resources-section">
+    <h1>Veteran Resources</h1>
+
+    <div class="resources-intro">
+      We are actively building a verified network of trusted veteran resources. If you know a resource that should be listed here, please contact us. Our goal is to connect veterans and their families with support in mental health, housing, employment, legal assistance, healthcare, and community services.
     </div>
-  </nav>
 
-  <!-- CONTENT -->
-  <main class="page-wrap">
+    <button class="accordion">Basic Needs & Assistance</button>
+    <div class="panel">
+      <ul>
+        <li>
+          <a href="https://www.harvisonhouse.org" target="_blank">Harvison House</a>
+          <span class="resource-description">Helps veterans furnish their homes with basic household items and essentials.</span>
+        </li>
+      </ul>
+    </div>
 
-    <section class="content-box">
-      <h1>Resources</h1>
+    <button class="accordion">Community & Support</button>
+    <div class="panel">
+      <ul>
+        <li>
+          <a href="https://www.missioncontinues.org" target="_blank">The Mission Continues</a>
+          <span class="resource-description">Volunteer and leadership opportunities for veterans looking to continue serving their communities.</span>
+        </li>
+        <li>
+          <a href="https://www.veteransocialclub.vet" target="_blank">Veteran Social Club</a>
+          <span class="resource-description">A community-focused organization offering events, support, and connection for veterans.</span>
+        </li>
+      </ul>
+    </div>
 
-      <p>
-        We are currently gathering trusted resources to help veterans connect with programs,
-        assistance, legal support, and other essential services.
-      </p>
+    <button class="accordion">Crisis Support</button>
+    <div class="panel">
+      <ul>
+        <li>
+          <a href="https://www.veteranscrisisline.net" target="_blank">Veterans Crisis Line</a>
+          <span class="resource-description">24/7 confidential support for veterans in crisis. Call or text 988, then press 1.</span>
+        </li>
+      </ul>
+    </div>
 
-      <p class="highlight">
-        This section will be available shortly.
-      </p>
+    <button class="accordion">Employment & Education</button>
+    <div class="panel">
+      <ul>
+        <li>
+          <a href="https://www.careeronestop.org/Veterans" target="_blank">CareerOneStop Veterans</a>
+          <span class="resource-description">Career tools, job resources, resume help, and employment support for veterans.</span>
+        </li>
+        <li>
+          <a href="https://www.va.gov/education/" target="_blank">GI Bill / VA Education Benefits</a>
+          <span class="resource-description">Education and training benefits for veterans, service members, and eligible family members.</span>
+        </li>
+        <li>
+          <a href="https://vtrc.us" target="_blank">Veterans Transition Resource Center</a>
+          <span class="resource-description">Helps connect veterans with employment support, benefits guidance, and transition assistance.</span>
+        </li>
+      </ul>
+    </div>
 
-      <p>
-        Our goal is to provide a reliable, easy-to-use resource hub so veterans can quickly
-        find the support they need.
-      </p>
-    </section>
+    <button class="accordion">Healthcare & Mental Health</button>
+    <div class="panel">
+      <ul>
+        <li>
+          <a href="https://www.va.gov/las-vegas-vet-center/" target="_blank">Las Vegas Vet Center</a>
+          <span class="resource-description">Counseling and support services for veterans and their families, including readjustment counseling.</span>
+        </li>
+        <li>
+          <a href="https://www.va.gov/southern-nevada-health-care/" target="_blank">VA Southern Nevada Healthcare System</a>
+          <span class="resource-description">Local VA healthcare services for veterans in the Las Vegas area.</span>
+        </li>
+        <li>
+          <a href="https://www.va.gov" target="_blank">U.S. Department of Veterans Affairs</a>
+          <span class="resource-description">Access to healthcare, disability benefits, claims, and other federal veteran services.</span>
+        </li>
+        <li>
+          <a href="https://westcare.com" target="_blank">WestCare Foundation</a>
+          <span class="resource-description">Offers behavioral health, housing assistance, and treatment programs for veterans and others in need.</span>
+        </li>
+      </ul>
+    </div>
 
-  </main>
+    <button class="accordion">Housing & Homeless Support</button>
+    <div class="panel">
+      <ul>
+        <li>
+          <a href="https://veterans.nv.gov" target="_blank">Nevada Department of Veterans Services</a>
+          <span class="resource-description">State-level support for veterans including benefits guidance, housing programs, and service connections.</span>
+        </li>
+        <li>
+          <a href="https://usvets.org/locations/las-vegas/" target="_blank">U.S.VETS Las Vegas</a>
+          <span class="resource-description">Provides housing, employment assistance, and supportive services for veterans.</span>
+        </li>
+      </ul>
+    </div>
+
+    <button class="accordion">Legal Assistance</button>
+    <div class="panel">
+      <ul>
+        <li>
+          <a href="https://www.nevadalegalservices.org" target="_blank">Nevada Legal Services</a>
+          <span class="resource-description">Free or low-cost legal help for qualifying veterans and families in Nevada.</span>
+        </li>
+        <li>
+          <a href="https://www.va.gov/homeless/vjo.asp" target="_blank">Veterans Justice Outreach Program</a>
+          <span class="resource-description">Supports veterans involved in the justice system and connects them with treatment and services.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Valor Bridge Foundation. All rights reserved.
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach((accordion) => {
+      accordion.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
