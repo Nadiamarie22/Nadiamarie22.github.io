@@ -10,7 +10,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color: #f5f1e8;
       background:
-        linear-gradient(rgba(10, 15, 10, 0.85), rgba(10, 15, 10, 0.9)),
+        linear-gradient(rgba(10, 15, 10, 0.82), rgba(10, 15, 10, 0.88)),
         url("background.png");
       background-size: cover;
       background-position: center;
@@ -25,7 +25,7 @@
       grid-template-columns: auto 1fr auto;
       align-items: center;
       padding: 10px 20px;
-      background: rgba(8, 12, 9, 0.85);
+      background: rgba(8, 12, 9, 0.88);
       border-bottom: 1px solid rgba(212, 178, 106, 0.35);
       backdrop-filter: blur(8px);
       gap: 20px;
@@ -43,24 +43,25 @@
       display: block;
     }
 
-   .nav-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    .nav-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #e6d3a3;
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
 
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #e6d3a3;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-}
-
-.nav-logo {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
+    .nav-logo {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
 
     .nav-links {
       display: flex;
@@ -82,154 +83,129 @@
     .page-wrap {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 40px 20px 70px;
+      padding: 35px 20px 60px;
     }
 
-    .hero-box,
-    .content-box {
-      background: rgba(10, 14, 11, 0.75);
+    .hero-intro {
+      background: rgba(10, 14, 11, 0.78);
       border: 1px solid rgba(212, 178, 106, 0.28);
       border-radius: 22px;
       padding: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
+      text-align: center;
     }
 
     .hero-tag {
       color: #d4b26a;
       font-weight: bold;
-      margin-top: 0;
+      margin: 0 0 12px;
+      letter-spacing: 0.5px;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-top: 0;
+    .hero-intro h1 {
+      font-size: 2.6rem;
+      margin: 0 0 14px;
       color: #f5f1e8;
     }
 
-    h2 {
-      color: #e6d3a3;
-      margin-top: 0;
-    }
-
-    p {
+    .hero-intro p {
+      margin: 0 auto;
+      max-width: 850px;
       line-height: 1.8;
       color: #e6dfd0;
+      font-size: 1.05rem;
     }
-.video-hero {
-  position: relative;
-  width: 100vw;
-  height: 75vh;
-  min-height: 500px;
-  margin: 25px 0;
-  margin-left: calc(-50vw + 50%);
-  overflow: hidden;
-}
 
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    .video-hero {
+      position: relative;
+      width: 100%;
+      height: 78vh;
+      min-height: 520px;
+      overflow: hidden;
+      border-top: 1px solid rgba(212, 178, 106, 0.25);
+      border-bottom: 1px solid rgba(212, 178, 106, 0.25);
+      background: #000;
+    }
 
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(90%, 850px);
-  text-align: center;
-  padding: 24px;
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(212, 178, 106, 0.25);
-  border-radius: 18px;
-  backdrop-filter: blur(4px);
-}
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.hero-overlay h1 {
-  margin: 0 0 14px;
-  font-size: 2.4rem;
-}
+    .video-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.30),
+        rgba(0, 0, 0, 0.40)
+      );
+    }
 
-.hero-overlay p {
-  margin: 10px 0;
-}
-
-.hero-sub {
-  color: #d4b26a;
-  font-weight: bold;
-}
     .hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(90%, 900px);
+      text-align: center;
+      padding: 28px;
+      background: rgba(0, 0, 0, 0.50);
+      border: 1px solid rgba(212, 178, 106, 0.28);
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+      z-index: 2;
+    }
 
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
-
-  background: rgba(0, 0, 0, 0.6);
-  padding: 25px;
-  border-radius: 15px;
-}
-
-    .hero-overlay h1 {
+    .hero-overlay h2 {
       margin: 0 0 14px;
-      font-size: 2.4rem;
+      font-size: 2.5rem;
+      color: #f5f1e8;
     }
 
     .hero-overlay p {
       margin: 10px 0;
+      line-height: 1.8;
+      color: #e8e0d1;
+      font-size: 1.05rem;
     }
 
     .hero-sub {
       color: #d4b26a;
       font-weight: bold;
     }
-    
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 20px;
+
+    .home-info {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 35px 20px 60px;
     }
 
-    .contact-item {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 15px;
-      border-radius: 12px;
-      border: 1px solid rgba(212, 178, 106, 0.2);
+    .info-box {
+      background: rgba(10, 14, 11, 0.78);
+      border: 1px solid rgba(212, 178, 106, 0.28);
+      border-radius: 22px;
+      padding: 30px;
+      text-align: center;
     }
 
-    .contact-item h3 {
+    .info-box h2 {
       margin-top: 0;
       color: #e6d3a3;
+      font-size: 2rem;
     }
 
-    .contact-item a {
-      color: #d4b26a;
-      text-decoration: none;
-      font-weight: 600;
+    .info-box p {
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #e6dfd0;
+      font-size: 1.05rem;
     }
 
-    .contact-item a:hover {
-      text-decoration: underline;
-    }
-
-    .ig {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .ig-icon {
-      width: 20px;
-      height: 20px;
-      filter: invert(84%) sepia(19%) saturate(433%) hue-rotate(347deg) brightness(92%) contrast(87%);
-    }
-
-    @media (max-width: 800px) {
+    @media (max-width: 950px) {
       .topnav {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -239,19 +215,46 @@
       .nav-links {
         justify-content: center;
       }
+
+      .hero-intro h1 {
+        font-size: 2.1rem;
+      }
+
+      .hero-overlay h2 {
+        font-size: 2rem;
+      }
     }
 
     @media (max-width: 700px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      .video-hero {
-        height: 60vh;
-        min-height: 360px;
+      .military-strip {
+        height: 32px;
       }
 
-      h1 {
-        font-size: 2rem;
+      .nav-logo {
+        height: 28px;
+      }
+
+      .nav-center {
+        font-size: 1rem;
+      }
+
+      .video-hero {
+        height: 62vh;
+        min-height: 420px;
+      }
+
+      .hero-intro h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-overlay h2 {
+        font-size: 1.7rem;
+      }
+
+      .hero-overlay p,
+      .hero-intro p,
+      .info-box p {
+        font-size: 0.98rem;
       }
     }
   </style>
@@ -261,13 +264,13 @@
 
   <nav class="topnav">
     <div class="nav-left">
-      <img src="militaylogos.png" class="military-strip">
+      <img src="militaylogos.png" class="military-strip" alt="Military branch logos">
     </div>
 
-   <div class="nav-center">
-  <img src="logo.png" class="nav-logo">
-  <span>VALOR BRIDGE FOUNDATION</span>
-</div>
+    <div class="nav-center">
+      <img src="logo.png" class="nav-logo" alt="Valor Bridge Foundation logo">
+      <span>VALOR BRIDGE FOUNDATION</span>
+    </div>
 
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -279,27 +282,20 @@
   </nav>
 
   <main class="page-wrap">
-
-    <section class="hero-box">
-      <p class="hero-tag">No Veteran Should Stand Alone.</p>
-      <h1>Bridging Veterans to Real Support, Resources, and Opportunity</h1>
+    <section class="hero-intro">
+      <p class="hero-tag">For the people, by the people.</p>
+      <h1>Serving veterans through support, guidance, and community.</h1>
       <p>
-        Valor Bridge Foundation connects veterans and their families to the support they need—whether it’s legal assistance, housing resources, mental health services, employment opportunities, or everyday essentials.
-    <p>
-      Everything you need, all in one place.
-    </p>
+        Valor Bridge Foundation is committed to helping veterans and their families
+        find real support through outreach, trusted resources, and meaningful community connection.
       </p>
     </section>
-
-    <section class="video-hero">
-      <video autoplay loop muted playsinline class="hero-video">
-        <source src="0401 (1)(1).mp4" type="video/mp4">
-      </video>
-
-      <div class="hero-overlay">
-
-
   </main>
+
+  <section class="video-hero">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="0401 (1)(1).mp4" type="video/mp4">
+    </video>
 
 </body>
 </html>
