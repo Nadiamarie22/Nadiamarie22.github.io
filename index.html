@@ -11,7 +11,7 @@
       color: #f5f1e8;
       background:
         linear-gradient(rgba(10, 15, 10, 0.82), rgba(10, 15, 10, 0.88)),
-        url("background.png");
+        url("background.jpg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -21,19 +21,22 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
+      display: flex;
       align-items: center;
-      padding: 10px 20px;
-      background: rgba(8, 12, 9, 0.88);
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 20px;
+      background: rgba(8, 12, 9, 0.9);
       border-bottom: 1px solid rgba(212, 178, 106, 0.35);
       backdrop-filter: blur(8px);
-      gap: 20px;
     }
 
     .nav-left {
+      flex: 1;
       display: flex;
       align-items: center;
+      justify-content: flex-start;
+      min-width: 0;
     }
 
     .military-strip {
@@ -44,16 +47,13 @@
     }
 
     .nav-center {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #e6d3a3;
-      font-size: 1.35rem;
-      text-transform: uppercase;
       text-align: center;
+      min-width: 0;
     }
 
     .nav-logo {
@@ -63,11 +63,23 @@
       display: block;
     }
 
+    .nav-title {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #e6d3a3;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
     .nav-links {
+      flex: 1;
       display: flex;
+      align-items: center;
       justify-content: flex-end;
       gap: 20px;
       flex-wrap: wrap;
+      min-width: 0;
     }
 
     .nav-links a {
@@ -83,16 +95,16 @@
     .page-wrap {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 35px 20px 60px;
+      padding: 28px 20px 40px;
     }
 
     .hero-intro {
       background: rgba(10, 14, 11, 0.78);
       border: 1px solid rgba(212, 178, 106, 0.28);
       border-radius: 22px;
-      padding: 30px;
-      margin-bottom: 28px;
+      padding: 34px 28px;
       text-align: center;
+      margin-bottom: 28px;
     }
 
     .hero-tag {
@@ -100,31 +112,36 @@
       font-weight: bold;
       margin: 0 0 12px;
       letter-spacing: 0.5px;
+      font-size: 1.1rem;
     }
 
     .hero-intro h1 {
-      font-size: 2.6rem;
-      margin: 0 0 14px;
+      margin: 0 0 16px;
+      font-size: 3.2rem;
+      line-height: 1.15;
       color: #f5f1e8;
     }
 
     .hero-intro p {
       margin: 0 auto;
-      max-width: 850px;
+      max-width: 900px;
       line-height: 1.8;
       color: #e6dfd0;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
     .video-hero {
       position: relative;
       width: 100%;
+      max-width: 1100px;
+      margin: 0 auto 40px;
       height: 78vh;
       min-height: 520px;
       overflow: hidden;
-      border-top: 1px solid rgba(212, 178, 106, 0.25);
-      border-bottom: 1px solid rgba(212, 178, 106, 0.25);
+      border-radius: 22px;
+      border: 1px solid rgba(212, 178, 106, 0.28);
       background: #000;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .hero-video {
@@ -139,8 +156,8 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        rgba(0, 0, 0, 0.30),
-        rgba(0, 0, 0, 0.40)
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.4)
       );
     }
 
@@ -149,10 +166,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: min(90%, 900px);
+      width: min(88%, 850px);
       text-align: center;
-      padding: 28px;
-      background: rgba(0, 0, 0, 0.50);
+      padding: 26px;
+      background: rgba(0, 0, 0, 0.52);
       border: 1px solid rgba(212, 178, 106, 0.28);
       border-radius: 20px;
       backdrop-filter: blur(4px);
@@ -161,7 +178,8 @@
 
     .hero-overlay h2 {
       margin: 0 0 14px;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
+      line-height: 1.2;
       color: #f5f1e8;
     }
 
@@ -177,55 +195,49 @@
       font-weight: bold;
     }
 
-    .home-info {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 35px 20px 60px;
-    }
-
-    .info-box {
-      background: rgba(10, 14, 11, 0.78);
-      border: 1px solid rgba(212, 178, 106, 0.28);
-      border-radius: 22px;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .info-box h2 {
-      margin-top: 0;
-      color: #e6d3a3;
-      font-size: 2rem;
-    }
-
-    .info-box p {
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.8;
-      color: #e6dfd0;
-      font-size: 1.05rem;
-    }
-
-    @media (max-width: 950px) {
+    @media (max-width: 1000px) {
       .topnav {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
       }
 
+      .nav-left,
+      .nav-center,
       .nav-links {
         justify-content: center;
+        flex: unset;
+        width: 100%;
       }
 
-      .hero-intro h1 {
-        font-size: 2.1rem;
-      }
-
-      .hero-overlay h2 {
-        font-size: 2rem;
+      .nav-title {
+        font-size: 1.3rem;
+        white-space: normal;
       }
     }
 
     @media (max-width: 700px) {
+      .hero-intro h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-tag {
+        font-size: 1rem;
+      }
+
+      .video-hero {
+        height: 60vh;
+        min-height: 380px;
+      }
+
+      .hero-overlay h2 {
+        font-size: 1.7rem;
+      }
+
+      .hero-overlay p,
+      .hero-intro p {
+        font-size: 0.98rem;
+      }
+
       .military-strip {
         height: 32px;
       }
@@ -234,27 +246,8 @@
         height: 28px;
       }
 
-      .nav-center {
-        font-size: 1rem;
-      }
-
-      .video-hero {
-        height: 62vh;
-        min-height: 420px;
-      }
-
-      .hero-intro h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero-overlay h2 {
-        font-size: 1.7rem;
-      }
-
-      .hero-overlay p,
-      .hero-intro p,
-      .info-box p {
-        font-size: 0.98rem;
+      .nav-title {
+        font-size: 1.05rem;
       }
     }
   </style>
@@ -269,7 +262,7 @@
 
     <div class="nav-center">
       <img src="logo.png" class="nav-logo" alt="Valor Bridge Foundation logo">
-      <span>VALOR BRIDGE FOUNDATION</span>
+      <span class="nav-title">VALOR BRIDGE FOUNDATION</span>
     </div>
 
     <div class="nav-links">
@@ -286,16 +279,28 @@
       <p class="hero-tag">For the people, by the people.</p>
       <h1>Serving veterans through support, guidance, and community.</h1>
       <p>
-        Valor Bridge Foundation is committed to helping veterans and their families
-        find real support through outreach, trusted resources, and meaningful community connection.
+        Valor Bridge Foundation is committed to helping veterans and their families find
+        real support through outreach, trusted resources, and meaningful community connection.
       </p>
     </section>
   </main>
 
   <section class="video-hero">
     <video autoplay loop muted playsinline class="hero-video">
-      <source src="0401 (1)(1).mp4" type="video/mp4">
+      <source src="0401 (1)(1)" type="video/mp4">
     </video>
+
+    <div class="hero-overlay">
+      <h2>Bridging Veterans to Real Support, Resources, and Opportunity</h2>
+      <p>
+        Valor Bridge Foundation connects veterans and their families to the help they need —
+        from legal support and housing assistance to employment, healthcare, and community outreach.
+      </p>
+      <p class="hero-sub">
+        This website is built to be a one-stop hub for trusted guidance, resources, and real-world support.
+      </p>
+    </div>
+  </section>
 
 </body>
 </html>
