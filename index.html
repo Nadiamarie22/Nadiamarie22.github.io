@@ -21,18 +21,26 @@
     }
 
     /* NAV BAR */
-    .topnav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 24px;
-      background: rgba(8, 12, 9, 0.82);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(212, 178, 106, 0.35);
-    }
+   <nav class="topnav">
+
+  <!-- LEFT: MILITARY STRIP -->
+  <div class="nav-left">
+    <img src="military.png" class="military-strip">
+  </div>
+
+  <!-- CENTER -->
+  <div class="nav-center">
+    VALOR BRIDGE FOUNDATION
+  </div>
+
+  <!-- RIGHT -->
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resources.html">Resources</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
     .nav-brand {
       display: flex;
