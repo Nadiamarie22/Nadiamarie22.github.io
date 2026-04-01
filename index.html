@@ -115,7 +115,52 @@
       line-height: 1.8;
       color: #e6dfd0;
     }
+ .video-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: 22px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(212, 178, 106, 0.28);
+      background: rgba(10, 14, 11, 0.75);
+    }
 
+      .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: min(90%, 850px);
+      text-align: center;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(212, 178, 106, 0.25);
+      border-radius: 18px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-overlay h1 {
+      margin: 0 0 14px;
+      font-size: 2.4rem;
+    }
+
+    .hero-overlay p {
+      margin: 10px 0;
+    }
+
+    .hero-sub {
+      color: #d4b26a;
+      font-weight: bold;
+    }
+    
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -173,6 +218,10 @@
       .contact-grid {
         grid-template-columns: 1fr;
       }
+      .video-hero {
+        height: 60vh;
+        min-height: 360px;
+      }
 
       h1 {
         font-size: 2rem;
@@ -215,31 +264,12 @@
       </p>
     </section>
 
-    <section class="content-box">
-      <h2>Mission Statement</h2>
+    <section class="video-hero">
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="0401 (1)(1).mp4" type="video/mp4">
+      </video>
 
-      <p><em>“For the people, by the people.”</em></p>
-
-      <p>
-        The Valor Bridge Foundation is committed to serving those who have served by providing comprehensive support to veterans at every stage of their journey—both those transitioning from military service to civilian life and those continuing to fight personal battles at home.
-      </p>
-
-      <p>
-        Rooted in the principles of service, unity, and resilience, we deliver programs focused on community outreach, substance abuse and domestic violence support, trade skill development, employment assistance, resume building, and personalized guidance through the VA system, including disability claims navigation.
-      </p>
-
-      <p>
-        We believe no veteran should stand alone. Through hands-on mentorship and advocacy, we act as a bridge—connecting veterans to the resources, opportunities, and support systems they deserve.
-      </p>
-
-      <p>
-        Guided by the Hawaiian values of ʻOhana (family), respect, and community, we foster an inclusive environment where veterans and civilians come together as one. Through local events, outreach initiatives, and collaborative efforts, we aim to strengthen our communities, uplift our veterans, and ensure that help is always within reach.
-      </p>
-
-      <p>
-        <strong>Together, we are not just transitioning—we are coming home as one.</strong>
-      </p>
-    </section>
+      <div class="hero-overlay">
 
 
   </main>
