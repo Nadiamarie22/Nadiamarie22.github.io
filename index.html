@@ -92,108 +92,67 @@
       padding: 28px 20px 50px;
     }
 
-    .hero-intro,
-.video-box {
-  position: relative;
-  height: 820px;
-  margin-bottom: 10px;
+    .hero-intro {
   background: rgba(10, 14, 11, 0.78);
   border: 1px solid rgba(212, 178, 106, 0.28);
   border-radius: 22px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 38px 30px;
+  text-align: center;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
 }
 
-    .hero-intro {
-      padding: 34px 28px;
-      text-align: center;
-      margin-bottom: 28px;
-    }
 
-    .hero-tag {
-      color: #d4b26a;
-      font-weight: bold;
-      margin: 0 0 12px;
-      font-size: 1.08rem;
-    }
+   .hero-tag {
+  color: #d4b26a;
+  font-weight: 700;
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
 
     .hero-intro h1 {
-      margin: 0 0 16px;
-      font-size: 3rem;
+      margin: 0 0 18px;
+      font-size: 3.1rem;
       line-height: 1.15;
       color: #f5f1e8;
     }
 
     .hero-intro p {
-      margin: 0 auto;
+      margin: 0 auto 10px;
       max-width: 900px;
       line-height: 1.8;
       color: #e6dfd0;
-      font-size: 1.06rem;
+      font-size: 1.08rem;
     }
-
-    .image-hero {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto 30px;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid rgba(212, 178, 106, 0.28);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-.hero-image {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  display: block;
-}
-
-.image-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.5)
-  );
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  padding: 25px;
-
-  background: rgba(0, 0, 0, 0.55);
-  border: 1px solid rgba(212, 178, 106, 0.28);
-  border-radius: 20px;
-}
-
-.hero-overlay h2 {
-  margin: 0 0 15px;
-  font-size: 2.3rem;
-  color: #f5f1e8;
-}
-
-.hero-overlay p {
-  margin: 10px 0;
-  color: #e8e0d1;
-  line-height: 1.8;
-}
-
 .hero-sub {
   color: #d4b26a;
-  font-weight: bold;
+  font-weight: 700;
 }
+.hero-tag {
+  color: #d4b26a;
+  font-weight: 700;
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+   .hero-image {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+} 
+    @media (max-width: 800px) {
+  .hero-intro h1 {
+    font-size: 2.2rem;
+  }
 
+  .hero-intro p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    height: 380px;
+  }
+}
     @media (max-width: 1050px) {
       .topnav {
         grid-template-columns: 1fr;
@@ -229,17 +188,8 @@
         font-size: 2.1rem;
       }
 
-      .hero-intro p,
-      .hero-overlay p {
-        font-size: 0.98rem;
-      }
-
       .hero-overlay h2 {
         font-size: 1.65rem;
-      }
-
-      .video-box {
-        height: 420px;
       }
     }
   </style>
@@ -281,7 +231,7 @@
 
     <section class="image-hero">
 
-  <img src="background.jpg" class="hero-image">
+  <img src="background.jpg" class="hero-image alt="Valor Bridge Foundation hero image">
 
 
   </main>
